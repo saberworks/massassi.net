@@ -13,7 +13,7 @@ services:
             POSTGRES_INITDB_ARGS: --auth-host=scram-sha-256
             POSTGRES_HOST_AUTH_METHOD: scram-sha-256
         volumes:
-            - massassi-data:/var/lib/postgresql/data
+            - massassi-postgres-data:/var/lib/postgresql/data
 
     # This is a mysql instance that gets pre-loaded with the sql file in:
     #
@@ -79,5 +79,5 @@ services:
             - /home/brian/code/massassi-django/import:/home/brian/code/massassi-django/import
 
 volumes:
-    massassi-data:
+    massassi-postgres-data:
     massassi-user-data:
