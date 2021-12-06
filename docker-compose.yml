@@ -74,6 +74,7 @@ services:
             MASSASSI_DATABASE_PASSWORD: ${MASSASSI_DATABASE_PASSWORD}
             DJANGO_SETTINGS_MODULE: ${DJANGO_SETTINGS_MODULE}
             MASSASSI_DATABASE_HOST: ${MASSASSI_DATABASE_HOST}
+            SENDGRID_API_KEY: ${SENDGRID_API_KEY}
         volumes:
             - massassi-user-data:/massassi-user-data:rw
             - /home/brian/code/massassi-django/import:/home/brian/code/massassi-django/import
