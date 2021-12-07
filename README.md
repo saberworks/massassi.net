@@ -16,7 +16,7 @@ Once the data migration is done and the site is fully up and backed up, the db-i
 
 Since you don't have the database dumps or even an empty schema, this probably won't be useful to make a "massassi clone" at this point.  However, I will upload an empty schema soon.  Once it's here, you will have to check out this repository, and then populate the following folders as described:
 
-* massassi-web/ - nginx server that reverse proxies to all the apps below (provided in this repo)
+* `massassi-web/` - nginx server that reverse proxies to all the apps below (provided in this repo)
 
 Each sub-project of massassi must be checked out individually in this 
 directory.
@@ -30,6 +30,19 @@ The following directories must also exist:
 * `massassi-etc/` - this holds all the files that are currently on the massassi server but aren't reasonable to push to github.  Things like huge folders full of random images, large file repositories, personal junk from various staff members, etc.  This directory will be mounted in the `web` nginx instance so all files here will be made available to the public.  (This is just so we don't lose a whole bunch of massassi history that resides on the server but isn't really linked from anywhere, except maybe old forum posts, irc chats, and discord chats.)
 
 Before you `docker-compose up` you should go into the massassi-static project, set up your env/venv, and run `python build.py` to convert all the various markdown and html content files to full HTML pages (which get written to the `massassi-static/output/` directory).
+
+The directory structure should like this:
+
+```
+-rw-rw-r-- ... docker-compose.yml
+-rw-rw-r-- ... LICENSE.md
+drwxrwxr-x ... massassi-django
+drwxrwxr-x ... massassi-etc
+drwxrwxr-x ... massassi-mysql-import
+drwxrwxr-x ... massassi-static
+drwxrwxr-x ... massassi-web
+-rw-rw-r-- ... README.md
+```
 
 # BRIAN IMPORT INSTRUCTIONS
 
