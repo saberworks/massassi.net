@@ -43,6 +43,7 @@ services:
             - "80:80"
         volumes:
             - ./massassi-web/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+            - ./massassi-etc/:/app/massassi-etc/:ro
 
     # Static parts of massassi, including:
     #  - static/ (stuff required by the entire site like css and main images)
