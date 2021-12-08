@@ -1,5 +1,6 @@
 .env
 .vscode
+import
 massassi-django
 massassi-etc
 massassi-mysql-import

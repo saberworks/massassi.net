@@ -78,7 +78,7 @@ services:
             SENDGRID_API_KEY: ${SENDGRID_API_KEY}
         volumes:
             - massassi-user-data:/massassi-user-data:rw
-            - /home/brian/code/massassi-django/import:/home/brian/code/massassi-django/import
+            - ./import:/home/brian/code/massassi-django/import
 
 volumes:
     massassi-postgres-data:
