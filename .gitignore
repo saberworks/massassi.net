@@ -5,3 +5,5 @@ massassi-django
 massassi-etc
 massassi-mysql-import
 massassi-static
+certbot/conf
+certbot/www
