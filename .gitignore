@@ -1,4 +1,5 @@
 .env
+.env-local
 .env-dev
 .env-prod
 .vscode
@@ -9,3 +10,4 @@ massassi-mysql-import
 massassi-static
 certbot/conf
 certbot/www
+docker-compose.override.yml
