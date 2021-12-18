@@ -56,6 +56,7 @@ services:
         expose:
             - 8001
         volumes:
+            - django-static:/jedibird-static:ro
             - ./massassi-static/output:/app:ro
             - ./massassi-static/conf/nginx.conf:/etc/nginx/conf.d/default.conf:ro
             - massassi-user-data:/massassi-user-data:ro
@@ -76,9 +77,11 @@ services:
             MASSASSI_DATABASE_HOST: ${MASSASSI_DATABASE_HOST}
             SENDGRID_API_KEY: ${SENDGRID_API_KEY}
         volumes:
+            - django-static:/jedibird-static:rw
             - massassi-user-data:/massassi-user-data:rw
             - ./import:/home/brian/code/massassi-django/import
 
 volumes:
     massassi-postgres-data:
     massassi-user-data:
+    django-static:
