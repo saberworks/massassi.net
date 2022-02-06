@@ -3,9 +3,6 @@ import re
 import subprocess
 import sys
 
-# TODO TODO TODO
-# also change around the .env file
-
 def main():
     cur = get_current_environment()
     new = sys.argv[1]
