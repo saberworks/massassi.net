@@ -1,0 +1,186 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	font-family: Verdana, Arial, Tahoma, Sans-Serif;
+	font-size: 1em;
+	background-color: #666666;
+	margin: 0px;
+	display: block;
+	max-width: 120ch;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.box {
+	border: #338833 1px solid;
+	padding: 4px;
+	background-color: #FFFFFF;
+	margin: 5px;
+}
+
+code {
+	display: block;
+}
+
+#container {
+	padding: 0px;
+	margin-left: 140px;
+	margin-right: 40px;
+	background-color: #F9FFF9;
+	height: 100%;
+}
+
+#pageHeader {
+	border: 0px;
+	margin: 0px;
+	height: auto;
+}
+
+#title {
+	font-size: 400%;
+	display: inline;
+	font-variant: small-caps;
+}
+
+#subtitle {
+	font-size: 80%;
+	display: block;
+	background-color: #AADDAA;
+}
+
+#menu {
+	padding: 0px;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	border-color: #000000;
+	border-width: 2px;
+}
+
+#styleSelect {
+	font-size: 60%;
+}
+
+#styleSelect, #styleSelect a {
+	color: #000000;
+	text-decoration: none;
+}
+
+#content {
+	margin: 0px;
+}
+
+#contentContainer {
+	border-style: dashed;
+	border-left: 0px;
+	border-right: 0px;
+	margin: 0px;
+}
+
+dl {
+	font-size: 80%;
+	margin: 0px;
+}
+
+#menuLinks a:hover {
+	background-color: #338833;
+	color: #00FF00;
+}
+
+#menuLinks a {
+	display: block;
+	background-color: #AADDAA;
+	color: #006600;
+	text-decoration: none;
+	padding-left: 5px;
+	width: 120px;
+}
+
+#menuLabel {
+	display: block;
+	font-weight: bold;
+	text-align: center;
+	font-size: 120%;
+}
+
+.pageFront #linkFront, .pageNews #linkNews, .pagePack #linkPack, .pageCompetition #linkCompetition, .pageForAuthors #linkForAuthors, .pageDownload #linkDownload {
+	background-color: #006600;
+	color: #00FF00;
+}
+
+H1 {
+	font-size: 150%;
+	margin-bottom: 2px;
+}
+
+H2 {
+	font-size: 110%;
+	margin-bottom: 2px;
+}
+
+.levelshots img {
+	padding: 3px;
+	background-color: #F9FFF9;
+	border: #338833 1px solid;
+}
+
+h1 {
+	font-size: 200%;
+	margin-bottom: 2px;
+}
+
+h2 {
+	font-size: 140%;
+	margin-bottom: 2px;
+}
+
+small {
+	font-size: 80%;
+}
+
+.pageForAuthors #content h3, .pageForAuthors #content h4 {
+	display: inline;
+	font-size: 150%;
+	margin-bottom: 2px;
+	border-bottom: 2px #000000 dashed;
+}
+
+.pageForAuthors #content h4 {
+	font-size: 120%;
+	border-bottom-width: 1px;
+}
+
+
+.pageForAuthors #content dd.x {
+	padding-left: 2em;
+}
+
+.pageForAuthors #content dt {
+	font-weight: bold;
+	margin-top: 1em;
+}
+
+.pageForAuthors #content div.hr {
+	height: 0px;
+	border-bottom: 4px #000000 solid;
+	margin-right: 2em;
+	margin-bottom: 3em;
+	margin-top: 3em;
+}
+
+.pageForAuthors #content div.indent {
+	padding: 2em;
+	padding-right: 0px;
+}
+
+.pageForAuthors #content p {
+	text-indent: 2em;
+}

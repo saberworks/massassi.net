@@ -1,0 +1,110 @@
+body {
+	background-color: #000;
+	color: #FFFFFF;
+	display: block;
+	max-width: 120ch;
+}
+
+a { color: #9DCC9D; }
+
+a:hover { color: #8CB68C; }
+
+.box {
+	border: #666666 1px solid;
+	background-color: #131418;
+}
+
+#container {
+	background-color: #0D0D10;
+	border-left: #333333 1px dotted;
+	border-right: #333333 1px dotted;
+}
+
+#contentContainer {
+	background-repeat: no-repeat;
+	border-style: solid;
+}
+
+.pageFront #contentContainer {
+	background-image: url("img/image1.jpg");
+}
+
+.pageNews #contentContainer {
+	background-image: url("img/image2.jpg");
+}
+
+.pageForAuthors #contentContainer {
+	background-image: url("img/image3.jpg");
+}
+
+.pageDownload #contentContainer {
+	background-image: url("img/image4.jpg");
+}
+
+.pageCompetition #contentContainer {
+	background-image: url("img/image5.jpg");
+}
+
+.pagePack #contentContainer {
+	background-image: url("img/image6.jpg");
+}
+
+#title {
+	padding-left: 25px;
+}
+
+#subtitle {
+	background-color: #333333;
+	border-top: #666666 1px solid;
+	border-bottom: #000000 1px solid;
+	padding-left: 50px;
+}
+
+#menu {
+	border-color: #A8DBA8;
+}
+
+#menuLinks a:hover {
+	background-color: #8CB68C;
+	color: #000000;
+}
+
+#menuLinks a {
+	background-color: #485D48;
+	color: #9DCC9D;
+}
+
+.pageFront #linkFront, .pageNews #linkNews, .pagePack #linkPack, .pageCompetition #linkCompetition, .pageForAuthors #linkForAuthors, .pageDownload #linkDownload {
+	background-color: #A8DBA8;
+	color: #000000;
+}
+
+#styleSelect, #styleSelect a {
+	color: #DDDDDD;
+}
+
+.pageForAuthors #content h3, .pageForAuthors #content h4 {
+	border-color: #FFFFFF;
+}
+
+.pageForAuthors #content div.hr {
+	border-color: #FFFFFF;
+}
+
+#subtitle {
+	display: none;
+}
+
+#title {
+	display: none;
+}
+
+#pageHeader {
+	background-image: url("img/jkarenadark.jpg");
+}
+
+.levelshots img {
+	padding: 3px;
+	background-color: #0D0D10;
+	border: #A8DBA8 1px solid;
+}
