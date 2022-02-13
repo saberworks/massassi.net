@@ -1,0 +1,8 @@
+== my queue_indicator.cog doesnt work ==
+- the cogs wont work in single player, try testing in MP
+- if your arena_client is broken, queue_indicator wont work. you can tell if arena_client is broken because you will be able to fire the bryar in the spectator area
+- make sure you specified surfaces, sounds, and an ANIMATED mat in the placed cogs setup
+- also make sure your level is set as MP in the episodes setup and not SP
+
+== i can shoot in my spectator area and nothing works/arena_client is broken ==
+- you need to update your master.tpl. see the section in the readme about this.

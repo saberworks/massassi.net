@@ -1,0 +1,72 @@
+body {
+	background-color: #666666;
+	display: block;
+	max-width: 120ch;
+}
+
+.box {
+	border: #338833 1px solid;
+	background-color: #FFFFFF;
+}
+
+#title {
+	padding-bottom: 4px;
+}
+
+a {
+	color: #000066;
+	font-weight: bold;
+}
+
+a:hover { color: #AAAAFF; }
+
+#container {
+	background-color: #F9F9FF;
+}
+
+#subtitle {
+	background-color: #A1A1F2;
+}
+
+#menu {
+	border-color: #333388;
+}
+
+#menuLinks a:hover {
+	background-color: #6666AA;
+	color: #AAAAFF;
+}
+
+#menuLinks a {
+	background-color: #A1A1F2;
+	color: #000066;
+	font-weight: normal;
+}
+
+.pageFront #linkFront, .pageNews #linkNews, .pagePack #linkPack, .pageCompetition #linkCompetition, .pageForAuthors #linkForAuthors, .pageDownload #linkDownload {
+	background-color: #333388;
+	color: #AAAAFF;
+}
+
+#styleSelect, #styleSelect a {
+	color: #000000;
+	font-weight: normal;
+}
+
+#title {
+	display: none;
+}
+
+#subtitle {
+	display: none;
+}
+
+#pageHeader {
+	background-image: url("img/jkarenablue.jpg");
+}
+
+.levelshots img {
+	padding: 3px;
+	background-color: #F9F9FF;
+	border: #333388 1px solid;
+}

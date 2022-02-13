@@ -97,6 +97,14 @@ services:
         ports:
             - "9001:9001"
 
+    jkarena-web:
+        hostname: rbots-web
+        build:
+            context: ./jkarena-web
+        restart: always
+        ports:
+            - "9002:9002"
+
 volumes:
     massassi-postgres-data:
     massassi-user-data:
