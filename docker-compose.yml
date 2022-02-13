@@ -89,6 +89,14 @@ services:
             MYSQL_USER: ${TACC_MYSQL_USER}
             MYSQL_PASSWORD: ${TACC_MYSQL_PASSWORD}
 
+    rbots-web:
+        hostname: rbots-web
+        build:
+            context: ./rbots-web
+        restart: always
+        ports:
+            - "9001:9001"
+
 volumes:
     massassi-postgres-data:
     massassi-user-data:
