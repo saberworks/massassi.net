@@ -10,3 +10,5 @@ certbot/conf
 certbot/www
 docker-compose.override.yml
 import
+tacc-db
+tacc-web

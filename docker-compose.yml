@@ -62,7 +62,35 @@ services:
             - massassi-user-data:/massassi-user-data:rw
             - ./import:/home/brian/code/massassi-django/import
 
+    tacc-db:
+        image: mysql:8
+        hostname: tacc-db
+        command: --default-authentication-plugin=mysql_native_password
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: ${TACC_MYSQL_ROOT_PASSWORD}
+            MYSQL_DATABASE: ${TACC_MYSQL_DATABASE}
+            MYSQL_USER: ${TACC_MYSQL_USER}
+            MYSQL_PASSWORD: ${TACC_MYSQL_PASSWORD}
+        volumes:
+            - ./tacc-db/initial-data:/docker-entrypoint-initdb.d:ro
+            - tacc-mysql-data:/var/lib/mysql
+
+    tacc-web:
+        hostname: tacc-web
+        build:
+            context: ./tacc-web
+        restart: always
+        ports:
+            - "9000:9000"
+        environment:
+            MYSQL_HOST: tacc-db
+            MYSQL_DATABASE: ${TACC_MYSQL_DATABASE}
+            MYSQL_USER: ${TACC_MYSQL_USER}
+            MYSQL_PASSWORD: ${TACC_MYSQL_PASSWORD}
+
 volumes:
     massassi-postgres-data:
     massassi-user-data:
     django-static:
+    tacc-mysql-data:
