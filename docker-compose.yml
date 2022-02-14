@@ -105,6 +105,16 @@ services:
         ports:
             - "9002:9002"
 
+    massassi.com-web:
+        hostname: massassi-com
+        build:
+            context: ./massassi.com-web
+        restart: always
+        ports:
+            - "9003:9003"
+        volumes:
+            - ./massassi.com-web/public:/var/www/html
+
 volumes:
     massassi-postgres-data:
     massassi-user-data:
