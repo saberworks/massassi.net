@@ -15,7 +15,7 @@ services:
         volumes:
             - massassi-postgres-data:/var/lib/postgresql/data
 
-    # Main web server; dispatches requests to the various apps based on 
+    # Main web server; dispatches requests to the various apps based on
     # hostname/filename/etc.
     web:
         image: nginx:latest
@@ -36,13 +36,15 @@ services:
         restart: always
         expose:
             - 8001
+#        ports:
+#            - "8001:8001"
         volumes:
             - django-static:/jedibird-static:ro
             - ./massassi-static/output:/app:ro
             - ./massassi-static/conf/nginx.conf:/etc/nginx/conf.d/default.conf:ro
             - massassi-user-data:/massassi-user-data:ro
 
-    # Dynamic parts of massassi, written in python/django and served by 
+    # Dynamic parts of massassi, written in python/django and served by
     # gunicorn
     massassi-django:
         hostname: massassi-django
@@ -57,10 +59,23 @@ services:
             DJANGO_SETTINGS_MODULE: ${DJANGO_SETTINGS_MODULE}
             MASSASSI_DATABASE_HOST: ${MASSASSI_DATABASE_HOST}
             SENDGRID_API_KEY: ${SENDGRID_API_KEY}
+#            AWS_BUCKET_SABERWORKS: ${AWS_BUCKET_SABERWORKS}
+#            AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+#            AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
         volumes:
             - django-static:/jedibird-static:rw
             - massassi-user-data:/massassi-user-data:rw
             - ./import:/home/brian/code/massassi-django/import
+
+    massassi-forums:
+        hostname: massassi-forums
+        build:
+            context: ./massassi-forums
+        restart: always
+        expose:
+            - 8002
+#        ports:
+#            - "8002:8002"
 
     tacc-db:
         image: mysql:8
@@ -114,6 +129,19 @@ services:
             - "9003:9003"
         volumes:
             - ./massassi.com-web/public:/var/www/html
+
+#    saberworks-web:
+#        hostname: saberworks-web
+#        build:
+#            context: ./saberworks-web
+#        stdin_open: true # docker run -i
+#        tty: true        # docker run -t
+#        # entrypoint: /bin/bash
+#        restart: always
+#        ports:
+#            - "9004:3000"
+#        volumes:
+#            - ./saberworks-web:/home/node:rw
 
 volumes:
     massassi-postgres-data:
